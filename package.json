@@ -1,0 +1,29 @@
+{
+  "name": "find-quote",
+  "version": "1.0.0",
+  "description": "To display a quote filtered on the basis of input string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "quotes",
+    "emotions"
+  ],
+  "bin": {
+    "find-quote": "./index.js"
+  },
+  "author": "Noopur Tiwari <naman1303@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naman1303/find-quote"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.7"
+  },
+  "dependencies": {
+    "underscore": "^1.9.1"
+  }
+}
