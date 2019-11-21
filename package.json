@@ -4,10 +4,10 @@
   "description": "To display a quote filtered on the basis of input string.",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "start": "node index.js"
+    "test": "node index.js"
   },
   "keywords": [
+    "quote",
     "quotes",
     "find your quote",
     "filtered quotes",
