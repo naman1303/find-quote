@@ -7,7 +7,7 @@
 
 "use strict";
 var quoteList = require('./data/quotes-list.json');
-var _ = require('underscore');
+var _ = require("underscore");
 var inputEmotion = "";
 var matchingQuote = "";
 var quoteListLength = "";
