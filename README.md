@@ -16,6 +16,10 @@ console.log(quote.getQuote('FUTURE'));
 console.log(quote.getQuote()); 
 // Random Output : The mind that is anxious about future events is miserable.
 ```
+### Reference
+Thanks to @vinitshahdeo as I referred to quotes from his [repository][]. 
 
 ### Contribution
 You are more than welcome to contribute.
+
+[repository]: <https://github.com/vinitshahdeo/inspirational-quotes>
