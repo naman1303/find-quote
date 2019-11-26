@@ -1,7 +1,6 @@
 ## Quote Finder
 [![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote)
 
-
 A Node.js module that returns quotes randomly or filtered based on input text/string. 
 Input is considered case insensitive. 
 
