@@ -11,7 +11,7 @@
     "quotes",
     "find your quote",
     "filtered quotes",
-    "quote and author"
+    "quote and author" 
   ],
   "bin": {
     "find-quote": "./index.js"
