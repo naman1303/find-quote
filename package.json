@@ -7,8 +7,11 @@
     "test": "node index.js"
   },
   "keywords": [
+    "quote",
     "quotes",
-    "emotions"
+    "find your quote",
+    "filtered quotes",
+    "quote and author" 
   ],
   "bin": {
     "find-quote": "./index.js"
@@ -21,7 +24,7 @@
   },
   "devDependencies": {
     "@types/underscore": "^1.9.4",
-    "coveralls": "^3.0.7"
+    "coveralls": "^3.0.8"
   },
   "dependencies": {
     "underscore": "^1.9.1"

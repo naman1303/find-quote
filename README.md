@@ -1,22 +1,27 @@
 ## Quote Finder
 [![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote)
 
-A Node.js module that returns quotes randomly or filtered based on input text/string. 
-Input is considered case insensitive. 
+A Node.js module to fetch quotes. If an input text/string is provided the quote having that word would be returned otherwise a random quote. Input is case insensitive. 
+
+There are separate functions to fetch a quote or "a quote with its author". Examples given below in Usage section.
 
 ### Installation
+```javascript
 npm install find-quote --save
+```
 
 ### Usage
 ```javascript
 const quote = require('find-quote');
 
 console.log(quote.getQuote('Imagination')); 
-// Filtered Output : Imagination is more important than knowledge.
+// Output is filtered : Imagination is more important than knowledge.
 console.log(quote.getQuote('FUTURE')); 
-// Case insensitive Output : I never think of the future
+// Output is case insensitive : I never think of the future
 console.log(quote.getQuote()); 
-// Random Output : The mind that is anxious about future events is miserable.
+// Output is random quote : The mind that is anxious about future events is miserable.
+console.log(quote.getQuoteWithAuthor('knowledge'));
+// Output is an object: { quote: 'Imagination is more important than knowledge.', author: 'Albert Einstein' }
 ```
 ### Reference
 Thanks to @vinitshahdeo as I referred to quotes from his [repository][]. 
