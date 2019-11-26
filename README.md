@@ -24,11 +24,14 @@ console.log(quote.getQuote());
 console.log(quote.getQuoteWithAuthor('knowledge'));
 // Output is an object: { quote: 'Imagination is more important than knowledge.', author: 'Albert Einstein' }
 ```
+### Reference
+I have referred to this [repository][] for the quotes.
 
 ### Contribution
 If you wish to add more quotes, you can send pull requests. 
 Suggestions are welcome for any sort of enhancements or improvements.
 
+[repository]: <https://github.com/vinitshahdeo/inspirational-quotes>
 [build-status-image]: https://travis-ci.org/naman1303/find-quote.svg?branch=master
 [badge-url]: https://api.codacy.com/project/badge/Grade/676df203e94d44af94969d094073dac9
 [build-status-url]: https://travis-ci.org/naman1303/find-quote
