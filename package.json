@@ -1,6 +1,6 @@
 {
   "name": "find-quote",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "To display a quote filtered on the basis of input string.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "url": "https://github.com/naman1303/find-quote"
   },
   "devDependencies": {
+    "@types/underscore": "^1.9.4",
     "coveralls": "^3.0.8"
   },
   "dependencies": {
