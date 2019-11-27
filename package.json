@@ -1,6 +1,6 @@
 {
   "name": "find-quote",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "To display a quote filtered on the basis of input string.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/underscore": "^1.9.4",
-    "coveralls": "^3.0.8"
+    "coveralls": "^3.0.9"
   },
   "dependencies": {
     "underscore": "^1.9.1"
