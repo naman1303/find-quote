@@ -1,11 +1,7 @@
 language: node_js
-
 node_js:
-  - "6"
-  - "8"
-  - "10"
-
-install:
-  - make node_modules
-
-after_success: npm run coverage
+  - '12'
+  - '10'
+  - '8'
+after_success:
+  - './node_modules/.bin/coveralls'
