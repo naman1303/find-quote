@@ -38,7 +38,7 @@ console.log(quote.getQuoteWithMovieName('Death'));
 ### Reference
 I have referred to this [repository][] for the quotes.
 
-## Next in line
+### Next in line
 I'm working on functions for displaying quotes from Series as well.
 
 ### Contribution
