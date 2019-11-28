@@ -1,6 +1,6 @@
 {
   "name": "find-quote",
-  "version": "1.2.8", 
+  "version": "1.2.9", 
   "description": "To display a quote filtered on the basis of input string.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "quotes",
     "find your quote",
     "filtered quotes",
-    "quote and author"
+    "quote and author",
+    "movie quotes"
   ],
   "bin": {
     "find-quote": "./index.js"
