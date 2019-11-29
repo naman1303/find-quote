@@ -1,6 +1,15 @@
 ## Quote Finder
+
+<h1><img src="images/quote.PNG" alt="Django Unchained"></h1>
+
+
 [![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote)
 
+<br>
+
+> Find your favorite quote using a search string or simply enjoy a nice one generated randomly.
+
+<br>
 
 A Node.js module to fetch quotes - generic as well as from movies. 
 If an input text/string is provided the quote having that word would be returned otherwise a random quote. Input is case insensitive. 
