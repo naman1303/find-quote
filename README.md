@@ -3,7 +3,7 @@
 <h1><img src="images/quote.PNG" alt="Django Unchained"></h1>
 
 
-[![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote)
+[![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote) [![Downloads](https://badgen.net/npm/dt/find-quote)](https://www.npmjs.com/package/find-quote) ![Install Size](https://badgen.net/packagephobia/install/find-quote) ![Last Commit](https://badgen.net/github/last-commit/naman1303/find-quote)
 
 <br>
 
