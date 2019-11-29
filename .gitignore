@@ -7,3 +7,4 @@ find-quote*.tgz
 #ignore coverage dir
 coverage
 npm-debug.log
+.old_travis.yml
