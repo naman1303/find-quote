@@ -7,17 +7,21 @@
 
 "use strict";
 var genericQuoteList = require('./data/generic-quotes.json');
-var movieQuoteList = require('./data/movies-quotes.json');
+var moviesQuoteList = require('./data/movies-quotes.json');
+var seriesQuoteList = require('./data/series-quotes.json');
 var _ = require("underscore");
 var inputEmotion = "";
 var matchingQuote = "";
 var genericQuoteListLength = "";
-var movieQuoteListLength = "";
+var moviesQuoteListLength = "";
+var seriesQuoteListLength = "";
 var index = 0;
 var genericQuoteObject = { "quote": "", "author": "" };
-var movieQuoteObject = { "quote": "", "movie": "" };
+var moviesQuoteObject = { "quote": "", "movie": "" };
+var seriesQuoteObject = { "quote": "", "series": "" };
 genericQuoteListLength = Object.keys(genericQuoteList).length;
-movieQuoteListLength = Object.keys(movieQuoteList).length;
+moviesQuoteListLength = Object.keys(moviesQuoteList).length;
+seriesQuoteListLength = Object.keys(seriesQuoteList).length;
 module.exports = {
     getQuote: function (inpString) {
         if (inpString) {
@@ -29,43 +33,9 @@ module.exports = {
                 }
             });
         } else {
-            matchingQuote = getRandomQuote(genericQuoteListLength,genericQuoteList);
+            matchingQuote = getRandomQuote(genericQuoteListLength, genericQuoteList);
         }
         return matchingQuote;
-    },
-
-    getMovieQuote: function (inpString) {
-        if (inpString) {
-            inputEmotion = inpString.toLowerCase().trim();
-            _.each(movieQuoteList, function (quote) {
-                if (quote.text.toLowerCase().includes(inputEmotion)) {
-                    matchingQuote = quote.text;
-                    return;
-                }
-            });
-        } else {
-            matchingQuote = getRandomQuote(movieQuoteListLength,movieQuoteList);
-        }
-        return matchingQuote;
-    },
-
-    getQuoteWithMovieName: function (inpString) {
-        if (inpString) {
-            inputEmotion = inpString.toLowerCase().trim();
-            _.each(movieQuoteList, function (quote) {
-                if (quote.text.toLowerCase().includes(inputEmotion)) {
-                    movieQuoteObject.quote = quote.text;
-                    movieQuoteObject.movie = quote.from;
-                    return;
-                }
-            });
-            if (movieQuoteObject.quote === "") {
-                movieQuoteObject = getRandomQuoteWithMovieName();
-            }
-        } else {
-            movieQuoteObject = getRandomQuoteWithMovieName();
-        }
-        return movieQuoteObject;
     },
 
     getQuoteWithAuthor: function (inpString) {
@@ -79,13 +49,81 @@ module.exports = {
                 }
             });
             if (genericQuoteObject.quote === "") {
-                genericQuoteObject = getRandomQuoteWithAuthor();
+                genericQuoteObject = getRandomQuoteWithDetails('G');
             }
         }
         else {
-            genericQuoteObject = getRandomQuoteWithAuthor();
+            genericQuoteObject = getRandomQuoteWithDetails('G');
         }
         return genericQuoteObject;
+    },
+
+    getMovieQuote: function (inpString) {
+        if (inpString) {
+            inputEmotion = inpString.toLowerCase().trim();
+            _.each(moviesQuoteList, function (quote) {
+                if (quote.text.toLowerCase().includes(inputEmotion)) {
+                    matchingQuote = quote.text;
+                    return;
+                }
+            });
+        } else {
+            matchingQuote = getRandomQuote(moviesQuoteListLength, moviesQuoteList);
+        }
+        return matchingQuote;
+    },
+
+    getQuoteWithMovieName: function (inpString) {
+        if (inpString) {
+            inputEmotion = inpString.toLowerCase().trim();
+            _.each(moviesQuoteList, function (quote) {
+                if (quote.text.toLowerCase().includes(inputEmotion)) {
+                    moviesQuoteObject.quote = quote.text;
+                    moviesQuoteObject.movie = quote.from;
+                    return;
+                }
+            });
+            if (moviesQuoteObject.quote === "") {
+                moviesQuoteObject = getRandomQuoteWithDetails('M');
+            }
+        } else {
+            moviesQuoteObject = getRandomQuoteWithDetails('M');
+        }
+        return moviesQuoteObject;
+    },
+
+    getSeriesQuote: function (inpString) {
+        if (inpString) {
+            inputEmotion = inpString.toLowerCase().trim();
+            _.each(seriesQuoteList, function (quote) {
+                if (quote.text.toLowerCase().includes(inputEmotion)) {
+                    matchingQuote = quote.text;
+                    return;
+                }
+            });
+        } else {
+            matchingQuote = getRandomQuote(seriesQuoteListLength, seriesQuoteList);
+        }
+        return matchingQuote;
+    },
+
+    getQuoteWithSeriesName: function (inpString) {
+        if (inpString) {
+            inputEmotion = inpString.toLowerCase().trim();
+            _.each(seriesQuoteList, function (quote) {
+                if (quote.text.toLowerCase().includes(inputEmotion)) {
+                    seriesQuoteObject.quote = quote.text;
+                    seriesQuoteObject.series = quote.from;
+                    return;
+                }
+            });
+            if (seriesQuoteObject.quote === "") {
+                seriesQuoteObject = getRandomQuoteWithDetails('S');
+            }
+        } else {
+            seriesQuoteObject = getRandomQuoteWithDetails('S');
+        }
+        return seriesQuoteObject;
     }
 }
 
@@ -95,18 +133,26 @@ function getRandomQuote(listLength, quoteList) {
     return matchingQuote;
 }
 
-function getRandomQuoteWithAuthor() {
-    index = randomInt(0, genericQuoteListLength - 1);
-    genericQuoteObject.quote = genericQuoteList[index].text;
-    genericQuoteObject.author = genericQuoteList[index].from;
-    return genericQuoteObject;
-}
-
-function getRandomQuoteWithMovieName() {
-    index = randomInt(0, movieQuoteListLength - 1);
-    movieQuoteObject.quote = movieQuoteList[index].text;
-    movieQuoteObject.movie = movieQuoteList[index].from;
-    return movieQuoteObject;
+function getRandomQuoteWithDetails(quoteType) {
+    if (quoteType === 'M') {
+        // Movie quote
+        index = randomInt(0, moviesQuoteListLength - 1);
+        moviesQuoteObject.quote = moviesQuoteList[index].text;
+        moviesQuoteObject.movie = moviesQuoteList[index].from;
+        return moviesQuoteObject;
+    } else if (quoteType === 'S') {
+        // Series quote
+        index = randomInt(0, seriesQuoteListLength - 1);
+        seriesQuoteObject.quote = seriesQuoteList[index].text;
+        seriesQuoteObject.movie = seriesQuoteList[index].from;
+        return seriesQuoteObject;
+    } else {
+        // Generic quote
+        index = randomInt(0, genericQuoteListLength - 1);
+        genericQuoteObject.quote = genericQuoteList[index].text;
+        genericQuoteObject.author = genericQuoteList[index].from;
+        return genericQuoteObject;
+    }
 }
 
 function randomInt(min, max) {

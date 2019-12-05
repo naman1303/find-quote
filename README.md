@@ -11,7 +11,9 @@
 
 <br>
 
-A Node.js module to fetch quotes - generic as well as from movies. 
+<span style="color: red">** What’s new in latest version? - Added quotes from famous series as well. </span>
+
+A Node.js module to fetch quotes - generic, from movies and from series. 
 If an input text/string is provided the quote having that word would be returned otherwise a random quote. Input is case insensitive. 
 
 There are variety of functions to fetch quotes. Examples given below.
@@ -42,13 +44,17 @@ console.log(quote.getMovieQuote());
 
 console.log(quote.getQuoteWithMovieName('Death'));
 // Output is an object: { quote: 'Remember that all worlds draw to an end and that noble death is a treasure which no one is too poor to buy.', movie: 'The Chronicles of Narnia' }
+
+console.log(quote.getSeriesQuote());
+// Output is random series quote : When you play the Game of Thrones, you win or you die.
+
+console.log(quote.getQuoteWithSeriesName('brave'));
+// Output is an object: { quote: 'The only time a man can be brave is when he’s afraid.', series: 'Game of Thrones' }
+
 ```
 
 ### Reference
 I have referred to this [repository][] for the quotes.
-
-### Next in line
-I'm working on functions for displaying quotes from Series as well.
 
 ### Contribution
 If you wish to add more quotes, you can send pull requests. 
