@@ -3,7 +3,7 @@
 <h1><img src="images/quote.PNG" alt="Django Unchained"></h1>
 
 
-[![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Dependency Status](https://david-dm.org/naman1303/find-quote.svg)](https://david-dm.org/naman1303/find-quote) [![Downloads](https://badgen.net/npm/dt/find-quote)](https://www.npmjs.com/package/find-quote) ![Install Size](https://badgen.net/packagephobia/install/find-quote) ![Last Commit](https://badgen.net/github/last-commit/naman1303/find-quote) [![Known Vulnerabilities](https://snyk.io/test/github/naman1303/find-quote/badge.svg)](https://snyk.io/test/github/naman1303/find-quote)
+[![Build Status][build-status-image]][build-status-url] [![Codacy Badge][badge-url]][code-quality-url] [![Dependency Status][dependency-status-badge]][dependency-status-url] [![Downloads][total-download]](https://www.npmjs.com/package/find-quote) ![Install Size][install-size-url] ![Last Commit][last-commit-url] [![Known Vulnerabilities][vulnerability-badge]][vulnerability-url]
 
 <br>
 
@@ -61,9 +61,16 @@ If you wish to add more quotes, you can send pull requests.
 Suggestions are welcome for any sort of enhancements or improvements.
 
 [repository]: <https://github.com/vinitshahdeo/inspirational-quotes>
+[dependency-status-badge]: https://david-dm.org/naman1303/find-quote.svg
+[dependency-status-url]: https://david-dm.org/naman1303/find-quote
 [build-status-image]: https://travis-ci.org/naman1303/find-quote.svg?branch=master
 [badge-url]: https://api.codacy.com/project/badge/Grade/676df203e94d44af94969d094073dac9
 [build-status-url]: https://travis-ci.org/naman1303/find-quote
 [code-quality-url]: https://www.codacy.com/manual/naman1303/find-quote?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=naman1303/find-quote&amp;utm_campaign=Badge_Grade
 [coverage-image]: https://coveralls.io/repos/github/naman1303/find-quote/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/naman1303/find-quote?branch=master
+[vulnerability-badge]: https://snyk.io/test/github/naman1303/find-quote/badge.svg
+[vulnerability-url]:https://snyk.io/test/github/naman1303/find-quote
+[last-commit-url]: https://badgen.net/github/last-commit/naman1303/find-quote
+[total-download]: https://badgen.net/npm/dt/find-quote
+[install-size-url]: https://badgen.net/packagephobia/install/find-quote
