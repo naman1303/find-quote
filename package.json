@@ -1,6 +1,6 @@
 {
   "name": "find-quote",
-  "version": "1.4.2",
+  "version": "1.5.1",
   "description": "Find your favorite quote using a search string or simply enjoy a nice one generated randomly.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "movie quotes",
     "quote finder",
     "movies quotes",
-    "series quotes"
+    "series quotes",
+    "display quotes",
+    "rainbow styled output"
   ],
   "bin": {
     "find-quote": "./index.js"
@@ -31,6 +33,7 @@
     "coveralls": "^3.0.9"
   },
   "dependencies": {
+    "chalk-animation": "^1.6.0",
     "underscore": "^1.9.1"
   }
 }

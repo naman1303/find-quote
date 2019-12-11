@@ -1,4 +1,4 @@
-## Quote Finder
+## Quote Finder &nbsp;<img src="images/rainbow.PNG" style="width:7%" alt="Rainbow">
 
 <h1><img src="images/quote.PNG" alt="Django Unchained"></h1>
 
@@ -11,7 +11,7 @@
 
 <br>
 
-<span style="color: red">** What’s new in latest version? - Added quotes from famous series as well. </span>
+<span style="color: red">** What’s new in latest version? - Added Rainbow styled display of quotes. </span>
 
 A Node.js module to fetch quotes - generic, from movies and from series. 
 If an input text/string is provided the quote having that word would be returned otherwise a random quote. Input is case insensitive. 
@@ -50,8 +50,28 @@ console.log(quote.getSeriesQuote());
 
 console.log(quote.getQuoteWithSeriesName('brave'));
 // Output is an object: { quote: 'The only time a man can be brave is when he’s afraid.', series: 'Game of Thrones' }
-
 ```
+
+### Rainbow Display 
+
+[chalk-animation][] package has been used to display a quote in Rainbow style. No explicit console or print is needed, just call the functions as mentioned below.
+
+![Expected Output](https://raw.githubusercontent.com/naman1303/images/master/rainbow_quote.PNG)
+
+<span style="color: red">** Limitation - Last display output overwrites all previous displays. </span>
+
+```javascript
+const quote = require('find-quote');
+quote.displayQuote();
+quote.displayMovieQuote();
+quote.displaySeriesQuote();
+```
+
+Note: You can also pass below animations (supported by chalk-animation) explicitly as input:
+
+    1. rainbow  2. pulse   3. glitch   4. radar   5. neon   6. karaoke
+
+    For example:  quote.displayQuote('glitch');
 
 ### Reference
 I have referred to this [repository][] for the quotes.
@@ -60,6 +80,7 @@ I have referred to this [repository][] for the quotes.
 If you wish to add more quotes, you can send pull requests. 
 Suggestions are welcome for any sort of enhancements or improvements.
 
+[chalk-animation]: <https://www.npmjs.com/package/chalk-animation>
 [repository]: <https://github.com/vinitshahdeo/inspirational-quotes>
 [dependency-status-badge]: https://david-dm.org/naman1303/find-quote.svg
 [dependency-status-url]: https://david-dm.org/naman1303/find-quote

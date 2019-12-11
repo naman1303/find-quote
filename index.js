@@ -10,6 +10,7 @@ var genericQuoteList = require('./data/generic-quotes.json');
 var moviesQuoteList = require('./data/movies-quotes.json');
 var seriesQuoteList = require('./data/series-quotes.json');
 var _ = require("underscore");
+const chalkAnimation = require('chalk-animation');
 var inputEmotion = "";
 var matchingQuote = "";
 var genericQuoteListLength = "";
@@ -124,9 +125,47 @@ module.exports = {
             seriesQuoteObject = getRandomQuoteWithDetails('S');
         }
         return seriesQuoteObject;
+    },
+
+    displayQuote: function (animationType) {
+        if (animationType) {
+            getAnimationType(animationType)(getRandomQuote(genericQuoteListLength, genericQuoteList));
+        }
+        else {
+            chalkAnimation.rainbow(getRandomQuote(genericQuoteListLength, genericQuoteList));
+        }
+    },
+
+    displayMovieQuote: function (animationType) {
+        if (animationType) {
+            getAnimationType(animationType)(getRandomQuoteWithDetails('M').quote);
+        }
+        else {
+            chalkAnimation.rainbow(getRandomQuoteWithDetails('M').quote);
+        }
+    },
+
+    displaySeriesQuote: function (animationType) {
+        if (animationType) {
+            getAnimationType(animationType)(getRandomQuoteWithDetails('S').quote);
+        }
+        else {
+            chalkAnimation.rainbow(getRandomQuoteWithDetails('S').quote);
+        }
     }
 }
 
+function getAnimationType(animationType) {
+    if (animationType == '' || animationType.toLowerCase() == 'rainbow') {
+        return chalkAnimation.rainbow;
+    }
+    else if (animationType.toLowerCase() == 'pulse') { return chalkAnimation.pulse }
+    else if (animationType.toLowerCase() == 'karaoke') { return chalkAnimation.karaoke }
+    else if (animationType.toLowerCase() == 'neon') { return chalkAnimation.neon }
+    else if (animationType.toLowerCase() == 'radar') { return chalkAnimation.radar }
+    else if (animationType.toLowerCase() == 'glitch') { return chalkAnimation.glitch }
+    else return chalkAnimation.rainbow;
+}
 function getRandomQuote(listLength, quoteList) {
     index = randomInt(0, listLength - 1);
     matchingQuote = quoteList[index].text;
