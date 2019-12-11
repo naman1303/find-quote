@@ -1,4 +1,4 @@
-## Quote Finder &nbsp;<img src="images/rainbow.PNG" style="width:7%" alt="Rainbow">
+## Quote Finder &nbsp;<img src="images/rainbow.png" style="width:7%" alt="Rainbow">
 
 <h1><img src="images/quote.PNG" alt="Django Unchained"></h1>
 
