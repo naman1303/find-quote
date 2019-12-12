@@ -10,8 +10,20 @@
 > Find your favorite quote using a search string or simply enjoy a nice one generated randomly.
 
 <br>
+<marquee scrollamount="2" behavior="alternate">
+<span>Quotes from </span>&nbsp;
+<span style="color:red">William Shakespeare</span>&nbsp;
+<span style="color:blue">F.R.I.E.N.D.S</span>&nbsp;
+<span style="color:green">Harry Potter</span>&nbsp;
+<span style="color:orange">Game of Thrones</span>&nbsp;
+<span>and many more...</span>
+</marquee>
+<br/>
+<br>
 
-<span style="color: red">** What’s new in latest version? - Added Rainbow styled display of quotes. </span>
+>   <span style="color: red">** What’s new in latest version? - Added Rainbow styled display of quotes. </span>
+
+<br>
 
 A Node.js module to fetch quotes - generic, from movies and from series. 
 If an input text/string is provided the quote having that word would be returned otherwise a random quote. Input is case insensitive. 
