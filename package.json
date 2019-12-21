@@ -1,6 +1,6 @@
 {
   "name": "find-quote",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Find your favorite quote using a search string or simply enjoy a nice one generated randomly.",
   "main": "index.js",
   "scripts": {

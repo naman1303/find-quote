@@ -26,11 +26,12 @@ seriesQuoteListLength = Object.keys(seriesQuoteList).length;
 module.exports = {
     getQuote: function (inpString) {
         if (inpString) {
-            inputEmotion = inpString.toLowerCase().trim();
+            var string = inpString.replace(/^\s+|\t+|\s+$/g, "");
+            inputEmotion = string.toLowerCase().replace(/\s+/g, " ");
             _.each(genericQuoteList, function (quote) {
                 if (quote.text.toLowerCase().includes(inputEmotion)) {
                     matchingQuote = quote.text;
-                    return;
+                    return; 
                 }
             });
         } else {
