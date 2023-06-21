@@ -33,7 +33,7 @@
     "coveralls": "^3.0.9"
   },
   "dependencies": {
-    "chalk-animation": "^1.6.0",
+    "chalk-animation": "^2.0.0",
     "underscore": "^1.9.1"
   }
 }
